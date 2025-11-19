@@ -20,3 +20,4 @@ class proyectoExtra(Tarea):
             descripcion = "Proyecto Extra"
             valor = 1000
             super().__init__(valor,descripcion,consigna,fechaEntrega,criterioEvaluacion)
+

@@ -1,6 +1,7 @@
 from beneficios import tutorias, puntosExtra, cambiarFecha
 from usuario import profesor, estudiante
 from tareas import trabajoPractico
+from mailAutomation import EmailSender
 
 estudiante1 = estudiante(nombre="hector",
                           apellido="vicente",
@@ -40,3 +41,11 @@ profesor1.aprobarTarea(estudiante1, tarea1)
 
 estudiante1.checkearTarea()
 
+usuario = "yaircinlozanito@gmail.com"
+contraseña = "ujmp kzkh dlmt gprw" 
+
+correo = EmailSender(usuario, contraseña)
+correo.enviar_mail(
+    destinatario="yairruiz7879@gmail.com",
+    asunto="Prueba desde Python en ProA La Falda",
+    mensaje="Hola! Este es el estado en el que se encuentran tus materias")
